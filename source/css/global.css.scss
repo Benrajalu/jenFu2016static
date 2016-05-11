@@ -1,0 +1,16 @@
+@import "compass/reset";
+@import "compass/css3";
+*{
+  box-sizing:border-box !important;
+}
+// Mixins
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+// Parts
+@import "_parts/grid";
+@import "_parts/mainMenu";
+@import "_parts/backstretches";
+@import "_parts/articles";
+@import "_parts/about";

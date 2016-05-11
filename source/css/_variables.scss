@@ -1,0 +1,32 @@
+// Box sizing, dammit
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+// Colors
+	$white: #fff;
+	$violet: #c12478;
+	$green: #78a29c;
+	$purple: #8976a3;
+	$black:#484848; 
+	$greyBG: #f1f2f2;
+	$blue:#caf1e8;
+	$greyText: #6d7686;
+
+// Fonts
+	$mainFont: 'robotoLight', Arial, Helvetica, sans-serif;
+	$altFont: 'robotoReg', Arial, Helvetica, sans-serif;
+	$thinFont: 'robotoThin', Arial, Helvetica, sans-serif;
+	$scriptFont: 'jennaSue', Arial, Helvetica, sans-serif;
+
+// Global Fonts
+	*{
+	  font-family: $mainFont; 
+	  box-sizing:border-box;
+	  -webkit-box-sizing:border-box;
+	  -moz-box-sizing:border-box;
+	  margin:0px;
+	  padding:0px;
+	}

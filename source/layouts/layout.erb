@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= current_page.data.title || "Sugar first" %></title>
+        <meta name="description" content="<%= current_page.data.description || "Sweet and sugary recipes on Sugar First" %>">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <meta name="author" content="Benoit Rajalu" />
+        <meta name="application-name" content="Sugar First, life second" />
+      
+        <!-- for Facebook -->          
+        <meta property="og:title" content="<%= current_page.data.title || "Sweet and sugary recipes on Sugar First" %>" /> 
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://benrajalu.net/logo.jpg" />
+        <meta property="og:url" content="http://benrajalu.net/" />
+        <meta property="og:description" content="<%= current_page.data.description || "Sweet and sugary recipes on Sugar First" %>" /> 
+
+        <%= stylesheet_link_tag 'global.css' %>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <%= javascript_include_tag 'vendor/modernizr-2.6.1.min.js' %>
+    </head>
+  
+  <body class="<%= page_classes %>">
+
+    <nav id="topNav">
+        <div class="menu">
+            <ul class="cf">
+                <li class="active"><a href="#">Conceptual <span>Direction</span></a></li>
+                <li><a href="#">Brand <span>Direction</span></a></li>
+                <li><a href="#">Interactive <span>Direction</span></a></li>
+                <li><a href="#">Motion Graphics <span>Direction</span></a></li>
+                <li><a href="#">Information <span>Direction</span></a></li>
+                <li class="right"><a href="#" id="aboutTrigger">About <span>Jen Fu</span></a></li>
+            </ul>
+            <button id="menuToggle" title="display the menu"><i></i></button>
+        </div>
+        <div id="logo"><a href="#">Jen Fu, Art director</a></div>
+    </nav>
+
+    <div id="contents">
+        <div id="about" class="rowFluid blueBG">
+            <button id="closePanel" title="close panel"><i class="fa fa-close"></i></button>
+            <div class="row">
+                <h1>Jen<strong>Fu</strong></h1>
+                <h2>Art director</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque amet explicabo quidem nulla tempore error aliquid commodi, nesciunt blanditiis, quae ullam, vitae impedit tenetur labore et nobis illo dolorem fuga.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis laboriosam molestias facere, tenetur, nulla aspernatur quas ratione numquam quasi fugit perferendis accusamus modi eum quis obcaecati quo porro nesciunt officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti aliquam quos ullam, quaerat, explicabo minus. Iste minus nemo sapiente corporis exercitationem commodi asperiores velit non, ad, cum autem numquam porro?</p>
+            </div>
+        </div>
+      <%= yield %>
+
+    </div>
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+
+    <%= javascript_include_tag 'TweenMax.min.js' %>
+    <%= javascript_include_tag 'jquery.backstretch.min.js' %>
+    <%= javascript_include_tag 'plugins.js' %>
+  </body>
+</html>

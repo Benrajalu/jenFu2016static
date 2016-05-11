@@ -1,0 +1,41 @@
+#about{
+  margin-bottom: 0px;
+  padding:130px 80px 90px;
+  position: relative;
+  display: none;
+  h1, h2, p{
+    max-width: 800px;
+  }
+  h1{
+    text-transform: uppercase;
+    @include lato(bold, 45px, $greyText);
+    strong{
+      @include lato(light, 45px, $greyText);
+    }
+  }
+  h2{
+    @include lato(light, 20px, $greyText);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  p{
+    @include lato(regular, 20px, $greyText);
+    line-height: 1.6;
+    margin-bottom: 13px;
+  }
+  #closePanel{
+    position: absolute;
+    top:30px;
+    right:30px;
+    font-size:25px;
+    color:#fff;
+    @include transition(all 200ms ease-out);
+    padding:0px;
+    background:transparent;
+    border:0px;
+    cursor: pointer;
+    &:hover{
+      color:$greyText;
+    }
+  }
+}

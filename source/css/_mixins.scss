@@ -1,0 +1,56 @@
+@mixin roboto($size, $color){
+	font-family:'robotoLight', Arial, Helvetica, sans-serif;
+	font-size:$size;
+	color:$color;
+}
+
+@mixin robotoThin($size, $color){
+	font-family:'robotoThin', Arial, Helvetica, sans-serif;
+	font-size:$size;
+	color:$color;
+}
+
+@mixin robotoReg($size, $color){
+	font-family:'robotoReg', Arial, Helvetica, sans-serif;
+	font-size:$size;
+	color:$color;
+}
+
+@mixin lato($type, $size, $color){
+	font-size:$size;
+	color:$color;
+	font-family: 'Lato';
+	@if $type == 'light' {
+		font-weight: 300;
+	}
+	@elseif $type == 'regular' {
+		font-weight: 400;
+	}
+	@elseif $type == 'bold' {
+		font-weight: 700;
+	}
+}
+
+@mixin jennaSue($size, $color){
+	font-family:'jennaSue', Arial, Helvetica, sans-serif;
+	font-size:$size;
+	color:$color;
+}
+
+@mixin clearfix(){
+	&:before,
+	&:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+
+	&:after {
+	    clear: both;
+	}
+
+	*zoom: 1;
+}
+
+.cf{
+	@include clearfix;
+}
