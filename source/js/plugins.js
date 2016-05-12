@@ -50,7 +50,7 @@ $(window).load(function () {
 		$(".backstretch").each(function(){
 			var src = $(this).find(".source").attr("src");
 			if(src){
-				$(this).backstretch(src, {speed: 300});	
+				$(this).backstretch(src, {speed: 300, centeredX: false});	
 			}
 		})
 

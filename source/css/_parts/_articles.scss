@@ -136,7 +136,11 @@
 			margin-bottom:0px;
 		}
 	}
-
+	@media all and (max-width:1200px){
+		&.featured{
+			padding-top: 90px;
+		}
+	}
 	@media all and (max-width:550px){
 		.title{
 			&.xl{
@@ -150,8 +154,16 @@
 			padding:10px;
 			vertical-align: bottom;
 			margin-bottom:15px;
-			.intro{
-				display:none;
+		}
+	}
+	@media all and (max-width:460px){
+		&.featured{
+			margin-bottom: 35px;
+			.title{
+				font-size: 20px
+			}
+			p{
+				font-size: 17.5px;
 			}
 		}
 	}
@@ -309,6 +321,7 @@ hr.dots{
 	@media all and (max-width:550px){
 		max-width:100%;
 		.contents{
+			padding:10px;
 			p.intro{
 				display:none;
 			}
@@ -316,7 +329,12 @@ hr.dots{
 				display:none;
 			}
 			.title{
-				font-size:15px;
+				font-size:11px;
+			}
+		}
+		&:hover{
+			.contents{
+				padding:10px;
 			}
 		}
 	}

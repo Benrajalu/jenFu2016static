@@ -220,4 +220,9 @@ body, html{
 			right:300px;
 		}
 	}
+	@media only screen and (max-width: 355px){
+	  &.active{
+	  	right:250px;
+	  }
+	}
 }

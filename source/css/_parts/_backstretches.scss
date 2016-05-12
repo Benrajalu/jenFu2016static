@@ -7,13 +7,21 @@
 	padding:0 80px;
 	background-color: $blue;
 	&.featured{
-		height:500px;
-		line-height: 500px;
+		height:430px;
+		line-height: 430px;
 		text-align: left;
 		margin-bottom:25px;
 	}
 	.source{
 		display:none;
+	}
+
+	@media all and (max-width:550px){
+		padding: 0 40px;
+	}
+
+	@media all and (max-width:460px){
+		padding:0 20px;
 	}
 
 }

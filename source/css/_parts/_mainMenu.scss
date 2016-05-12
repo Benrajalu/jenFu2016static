@@ -23,6 +23,21 @@
       top:0px;
       left:12px;
       @include transition(all 300ms);
+      #mail{
+        position: absolute;
+        left:0px;
+        bottom:30px;
+        width: 100%;
+        text-align: center;
+        @include transition(all 200ms ease-out);
+        img{
+          display: block;
+          margin:0 auto;
+        }
+        &:hover{
+          bottom:28px;
+        }
+      }
   }
   &:after{
     content:"";
@@ -139,12 +154,14 @@
         top:0px;
         right:-300px;
         margin:0px;
-        background:#fff;
-        border-left:7px solid $blue;
+        background:#e2ecf1;
+        padding-top:55px;
         @include transition(all 200ms ease-out);
         li, li.right{
           display: block;
           float: none;
+          line-height: 65px;
+          height: 65px;
         }
       }
       > button{
@@ -154,15 +171,16 @@
         cursor: pointer;
         display: block;
         position: absolute;
-        top:50%;
-        right: 15px;
-        width: 32px;
-        height: 32px;
-        margin-top:-16px;
+        top:-5px;
+        right: 0px;
+        width: 55px;
+        height: 55px;
+        background:#e2ecf1;
         i{
           display: block;
           width:32px;
-          height:6px;
+          height:3px;
+          margin:0 auto;
           @include border-radius(3px);
           background:$greyText;
           position:relative;
@@ -173,7 +191,7 @@
             content:"";
             display:block;
             width:32px;
-            height:6px;
+            height:3px;
             @include border-radius(3px);
             background:$greyText;
             position:absolute;
@@ -189,7 +207,6 @@
         &:hover{
           i{
             @include opacity(1);
-            margin-right:15px;
             @include transform(scale(0.95));
           }
         }
@@ -198,32 +215,65 @@
           i{
             top:-6px;
             @include opacity(1);
-            background:#fff;
+            background:#e2ecf1;
             &:before{
               @include transform(rotate(-405deg));
-              top:6px;
+              top:12px;
               background:$greyText;
               z-index:101;
               @include opacity(1);
+              width: 22px;
+              left:7px;
             }
             &:after{
               @include transform(rotate(405deg));
-              top:6px;
+              top:-1px;
               background:$greyText;
               z-index:101;
               @include opacity(1);
+              width: 22px;
+              left:7px;
             }
           }
         }
       }
       &.active{
         right:300px;
+        > button{
+          right: -55px;
+        }
         > ul{
           right:0px;
         }
         + #logo{
           left:-312px;
         }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+   &.compact{
+    #logo{
+      top: -10px;
+      height: 80px;
+      background-position: 0px -20px;
+      overflow: hidden;
+      border-bottom:3px solid $blue;
+      #mail{
+        bottom:-40px;
+      }
+    }
+   }
+  }
+
+  @media only screen and (max-width: 355px){
+    .menu{
+      > ul{
+        width:250px;
+      }
+      &.active{
+        right:250px;
       }
     }
   }
