@@ -1,11 +1,10 @@
 .backstretch{
 	height:150px;
 	line-height:150px;
-	text-align:center;
+	text-align:right;
 	margin-bottom:40px;
-	background:url("../img/food.jpg") top left repeat;
+	background:$black center center repeat;
 	padding:0 80px;
-	background-color: $blue;
 	&.featured{
 		height:430px;
 		line-height: 430px;
